@@ -5,6 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <style>
+        body {
+            background-color: #FFFFFF;
+            margin: 0;
+            padding: 20px; /* Add padding for space around the content */
+        }
+
+        .container {
+            width: 80%; /* Adjust width as needed */
+            margin: 0 auto; /* Center the container */
+            border-left: 5px solid gray; /* Left border */
+            border-right: 5px solid gray; /* Right border */
+            padding: 20px; /* Padding inside the container */
+        }
+
         table {
             font-family: Arial, sans-serif;
             border-collapse: collapse;
@@ -30,81 +44,74 @@
         }
     </style>
 </head>
-<body style="background-color:#FFFFFF;margin-left:50px;">
-    <img src="banner.png" alt="banner" width="1200" height="300">
-    <h1><b>ENG0018 Computer Laboratory 2024/25</b></h1>
-    <h2>Student URN: 6857759</h2>
-    <hr>
-    <h2 style="font-family: calibri;"><b>To what extent does ground effect affect aeroplanes on take-off and landing?</b></h2>
-     <!table of contents>
-    <table>
+<body>
+    <div class="container">
+        <img src="banner.png" alt="banner" width="1200" height="300">
+        <h1><b>ENG0018 Computer Laboratory 2024/25</b></h1>
+        <h2>Student URN: 6857759</h2>
+        <hr>
+        <h2 style="font-family: calibri;"><b>To what extent does ground effect affect aeroplanes on take-off and landing?</b></h2>
+        
+        <table>
+            <tr>
+                <th><h3><b>Table 1</b></h3></th>
+            </tr>
+            <tr>
+                <td><a href="#Abstract">Abstract</a></td>
+            </tr>
+            <tr>
+                <td><a href="#Introduction">Introduction</a></td>
+            </tr>
+            <tr>
+                <td><a href="#Analysis and Discussion">Analysis and Discussion</a></td>
+            </tr>
+            <tr>
+                <td><a href="#References">References</a></td>
+            </tr>
+        </table>
 
-        <tr>
-            <th><h3><b>Table 1</b></h3></th>
-        </tr>
-    <tr>
-        <td><a href="#Abstract">Abstract</td>
-    </tr>
-    <tr>
-        <td><a href="#Introduction">Introduction</td>
-    </tr>
-    <tr>
-        <td><a href="#Analysis and Discussion">Analysis and Discussion</td>
-    </tr>
-        <tr>
-        <td><a href="#References">References</td>
-    </tr>
-    </table>
-    <p id="date&time"></p>
-    <script>
-        const d = new Date();
-        document.getElementById("date&time").innerHTML = d;
-    </script>
-    
-    <hr>
-    <button id="colorButton">Click me to change colour</button>
-    <script>
-        var button = document.getElementById("colorButton");
-        function changeColor() {
-            var randomColor = "#" + Math.floor(Math.random()*16777215).toString(16);
-            button.style.backgroundColor = randomColor;
-        }
-        button.addEventListener("click", changeColor);
-    </script>
-    
-    <h3 id="Abstract">Abstract</h3>
-    <p class="ex1">
-        <pre>
-        This article contains work on answering a question to the Ground Effect which is an aerodynamic effect known for creating a cushion of air that is caused from a pressure differential in some vehicles.
-        </pre>
-    </p>
+        <p id="date&time"></p>
+        <script>
+            const d = new Date();
+            document.getElementById("date&time").innerHTML = d;
+        </script>
+        
+        <hr>
+        <button id="colorButton">Click me to change colour</button>
+        <script>
+            var button = document.getElementById("colorButton");
+            function changeColor() {
+                var randomColor = "#" + Math.floor(Math.random() * 16777215).toString(16);
+                button.style.backgroundColor = randomColor;
+            }
+            button.addEventListener("click", changeColor);
+        </script>
+        
+        <h3 id="Abstract">Abstract</h3>
+        <p class="ex1">
+            <pre>
+            This article contains work on answering a question to the Ground Effect which is an aerodynamic effect known for creating a cushion of air that is caused from a pressure differential in some vehicles.
+            </pre>
+        </p>
 
-    <h3 id="Introduction">Introduction</h3>
-    <p class="ex1">
-        <pre>
-        “Active  Learning (Angluin,  1988,  Cohn  et  al.,  1994)  is  a  paradigm  where  a  concept  is  learnt  by  an intelligent machine through the interaction of an oracle with the machine system, over a sequence of
-        learning epochs. A distinctive component in an active system is the querying strategy, used to sample candidate training instances from a pool and evaluate them for informativeness, i.e., their potential to  
-        improve  the  classification  model.  Various  strategies  have  been  proposed  including;  Query  by Committee  (Seung  et  al.,  1992),Monte  Carlo  estimation  (Roy  and  McCallum,  2001),  uncertainty sampling
-        (Lewis  and  Gale,  1994)  and  version  space  reduction  (margin  sampling)  (Tong  and  Koller, 2001). Irrespective of how the most informative pattern instances are chosen at each epoch they are presented  for
-        labeling,  to  a  machine  (database)  or  human  oracle  that  has  knowledge  of  the  class labels.  After  adding  the  newly  labeled  instances  to  the  current  training  set,  a  revised  model  is 
-        subsequently induced. A goal of this process is to achieve anefficient, incremental advancement of learning at each epoch. The process is continued until some stopping criterion has been met, such as reaching a stage
-        where information from the selected instances is contrary to the model, causing the classifier confidence to drop, as in Vlachos (2008).
-        </pre>
-    </p>
+        <h3 id="Introduction">Introduction</h3>
+        <p class="ex1">
+            <pre>
+            “Active Learning (Angluin, 1988, Cohn et al., 1994) is a paradigm where a concept is learnt by an intelligent machine through the interaction of an oracle with the machine system, over a sequence of learning epochs. A distinctive component in an active system is the querying strategy, used to sample candidate training instances from a pool and evaluate them for informativeness, i.e., their potential to improve the classification model. Various strategies have been proposed including; Query by Committee (Seung et al., 1992), Monte Carlo estimation (Roy and McCallum, 2001), uncertainty sampling (Lewis and Gale, 1994) and version space reduction (margin sampling) (Tong and Koller, 2001). Irrespective of how the most informative pattern instances are chosen at each epoch they are presented for labeling, to a machine (database) or human oracle that has knowledge of the class labels. After adding the newly labeled instances to the current training set, a revised model is subsequently induced. A goal of this process is to achieve an efficient, incremental advancement of learning at each epoch. The process is continued until some stopping criterion has been met, such as reaching a stage where information from the selected instances is contrary to the model, causing the classifier confidence to drop, as in Vlachos (2008).
+            </pre>
+        </p>
 
-    <h3 id=”Analysis and Discussion”>Analysis and Discussion</h3>
-    
-    <hr>
+        <h3 id="Analysis and Discussion">Analysis and Discussion</h3>
+        
+        <hr>
 
-<div class="marquee">
+        <div class="marquee">
             <marquee behavior="scroll" direction="left">University of Surrey</marquee>
         </div>
-</div>
 
-    <footer>
-        <p>&copy; 2024 - All rights reserved.</p>
-    </footer>
-
+        <footer>
+            <p>&copy; 2024 - All rights reserved.</p>
+        </footer>
+    </div>
 </body>
 </html>
-
