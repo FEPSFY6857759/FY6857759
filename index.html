@@ -78,16 +78,16 @@
     Verify Last Modified Time
     </button>
     <script>
-        async function getLast UpdatedTime() {
+        async function getLastUpdatedTime() {
         const username = 'jt01540';
         const repo = 'FY6857759';
-        const url = 'https://api.github.com/repos/${username}/${repo}/commits;
+        const url = 'https://api.github.com/repos/${username}/${repo}/commits';
     try {
     const response = await fetch(url, {
     method: 'GET',
     headers: {
+    'Accept': 'application/vnd.github.v3+json',
     }
-    'Accept: 'application/vnd.github.v3+json',
     });
     if (!response.ok) {
     throw new Error('Error fetching data: $(response.status} - ${response.statusText}');
