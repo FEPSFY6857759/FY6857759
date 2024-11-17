@@ -78,8 +78,8 @@
     Verify Last Modified Time
     </button>
     
-    <script>
-        async function getLastUpdatedTime() {
+<script>
+    async function getLastUpdatedTime() {
         const username = 'jt01540';
         const repo = 'FY6857759';
         const url = 'https://api.github.com/repos/${username}/${repo}/commits';
@@ -90,6 +90,7 @@
                 'Accept': 'application/vnd.github.v3+json',
             }
         });
+    }
         if (!response.ok) {
         throw new Error('Error fetching data: ${response.status} - ${response.statusText}');
         }
@@ -108,9 +109,9 @@
         document.getElementById('last-updated').innerText = 'Verifying...';
         await getLastUpdatedTime();
         alert("Last modified time has been successfully verified from GitHub API.");
-        }
-        window.onload = getLastUpdatedTime;
-    </script>
+    }
+    window.onload = getLastUpdatedTime;
+</script>
         
         <h3 id="Abstract">Abstract</h3>
         <p class="ex1">
