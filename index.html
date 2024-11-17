@@ -95,7 +95,6 @@
     const commits await response.json();
     if (commits && commits.length > 0) {
     const lastCommitDate = new Date(commits[0].commit.committer.date);
-    // Displaying the time on load
     document.getElementById('last-updated').innerText = "Last Modified Time: $(lastCommitDate.toLocaleString());
     } else {
     document.getElementById('last-updated').innerText 'No commits found in the repository.";
@@ -104,14 +103,12 @@
     document.getElementById('last-updated').innerText = 'Error fetching update time. Please check the repository details.';
     }
     }
-    // Function to verify the last update time by re-fetching it from the API
     async function verifyLastUpdatedTime() {
     }
     document.getElementById("last-updated').innerText = 'Verifying...';
     await getLastUpdatedTime();
     alert("Last modified time has been successfully verified from GitHub API.");
-    // Initial load to display the time on page load
-    window.onload getLastUpdatedTime;
+    window.onload = getLastUpdatedTime;
     </script>
         
         <hr>
