@@ -90,9 +90,9 @@
     'Accept: 'application/vnd.github.v3+json',
     });
     if (!response.ok) {
+    throw new Error('Error fetching data: $(response.status} - ${response.statusText}');
     }
-    throw new Error(Error fetching data: $(response.status} ${response.statusText}');
-    const commits await response.json();
+    const commits = await response.json();
     if (commits && commits.length > 0) {
     const lastCommitDate = new Date(commits[0].commit.committer.date);
     document.getElementById('last-updated').innerText = "Last Modified Time: $(lastCommitDate.toLocaleString());
@@ -110,17 +110,6 @@
     alert("Last modified time has been successfully verified from GitHub API.");
     window.onload = getLastUpdatedTime;
     </script>
-        
-        <hr>
-        <button id="colorButton">Click me to change colour</button>
-        <script>
-            var button = document.getElementById("colorButton");
-            function changeColor() {
-                var randomColor = "#" + Math.floor(Math.random() * 16777215).toString(16);
-                button.style.backgroundColor = randomColor;
-            }
-            button.addEventListener("click", changeColor);
-        </script>
         
         <h3 id="Abstract">Abstract</h3>
         <p class="ex1">
