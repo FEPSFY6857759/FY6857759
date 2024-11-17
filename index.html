@@ -158,15 +158,15 @@ google.charts.setOnLoadCallback(drawChart);
 
 function drawChart() {
 const data = google.visualization.arrayToDataTable([
-  ['Price', 'Size'],
+  ['Aircraft', 'Take-off Weight'],
   [50,7],[60,8],[70,8],[80,9],[90,9],
   [100,9],[110,10],[120,11],
   [130,14],[140,14],[150,15]
 ]);
 const options = {
-  title: 'House Prices vs. Size',
-  hAxis: {title: 'Square Meters'},
-  vAxis: {title: 'Price in Millions'},
+  title: 'Take-Off Weight for Aircraft',
+  hAxis: {title: 'Take-off Weight /kg'},
+  vAxis: {title: 'Aircraft'},
   legend: 'none'
 };
 const chart = new google.visualization.LineChart(document.getElementById('myChart'));
