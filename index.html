@@ -104,7 +104,6 @@
             console.error('Error fetching the last updated time:', error);
             document.getElementById('last-updated').innerText = 'Error fetching update time. Please check the repository details.';
         }
-    }
     async function verifyLastUpdatedTime() {
         document.getElementById('last-updated').innerText = 'Verifying...';
         await getLastUpdatedTime();
