@@ -227,6 +227,34 @@
             aeroplane can take-off and land at lower speeds than it could if flying higher, which improves control and reduces the risk of stalling at lower altitudes (Joseph E Burnside, 2019).
             </pre>
 
+        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    </body>
+<body>
+<div id="myChart" style="width:100%; max-width:600px; height:500px;"></div>
+
+<script>
+google.charts.load('current',{packages:['corechart']});
+google.charts.setOnLoadCallback(drawChart);
+
+function drawChart() {
+const data = google.visualization.arrayToDataTable([
+  ['Aircraft', 'Take-off Weight'],
+  [50,7],[60,8],[70,8],[80,9],[90,9],
+  [100,9],[110,10],[120,11],
+  [130,14],[140,14],[150,15]
+]);
+const options = {
+  title: 'Take-Off Weight for Aircraft',
+  hAxis: {title: 'Aircraft'},
+  vAxis: {title: 'Take-off Weight /kg'},
+  legend: 'none'
+};
+const chart = new google.visualization.LineChart(document.getElementById('myChart'));
+chart.draw(data, options);
+}
+</script>
+
+
         <h3 id="References">References</h3>
         <p class="ex1">
             <pre>
