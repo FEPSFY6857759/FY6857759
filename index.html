@@ -229,6 +229,7 @@
 
         <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     </body>
+
 <body>
 <div id="myChart" style="width:100%; max-width:600px; height:500px;"></div>
 
@@ -252,6 +253,29 @@ const chart = new google.visualization.LineChart(document.getElementById('myChar
 chart.draw(data, options);
 }
 </script>
+
+<div id="myChart2" style="width:100%; max-width:600px; height:500px;"></div>
+<script>
+google.charts.load('current',{packages:['corechart2']});
+google.charts.setOnLoadCallback(drawChart2);
+
+function drawChart2() {
+const data = google.visualization.arrayToDataTable([
+  ['Aircraft', 'Take-off Speed'],
+  ["Boeing 737",45360],["Airbus A320", 70305],["Boeing 757",108860],["Concorde",181435],["Airbus A340",259000],
+  ["Boeing 747",362870]
+]);
+const options = {
+  title: 'Take-Off Speed for Aircraft',
+  hAxis: {title: 'Aircraft'},
+  vAxis: {title: 'Take-off Speed /mph'},
+  legend: 'none'
+};
+const chart2 = new google.visualization.LineChart(document.getElementById('myChart2'));
+chart2.draw(data, options);
+}
+</script>
+
 <p>(Jeff Scott, 2002)</p>
 
         <h3 id="References">References</h3>
