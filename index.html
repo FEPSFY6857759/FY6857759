@@ -61,6 +61,55 @@
         }
     </style>
 </head>
+<style>
+    /* Styling for sections with a bordered container and indent */
+    .bordered-section {
+        border: 2px solid #25384a;
+        padding: 20px;
+        margin: 20px auto;
+        width: 90%;
+        background-color: #f9f9f9;
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+    }
+
+    .bordered-section h3 {
+        text-align: center;
+        color: #25384a;
+        font-size: 1.5em;
+    }
+
+    .bordered-section pre {
+        margin-left: 20px;
+        margin-right: 20px;
+        white-space: pre-wrap; /* Ensures text wraps properly */
+    }
+
+    .references {
+        padding-left: 30px;
+        list-style: none;
+    }
+
+    .references li {
+        margin-bottom: 10px;
+    }
+
+    .references a {
+        color: #25384a;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+    .references a:hover {
+        text-decoration: underline;
+    }
+
+    .references p {
+        margin: 5px 0 15px 0;
+        font-size: 0.9em;
+        color: #555;
+    }
+</style>
 <body>
     <div class="container">
         <img src="banner.png" alt="banner" width="1200" height="300">
@@ -167,7 +216,7 @@
   window.onload = displayTotalWordCount;
 </script>
 
-
+        <div class="bordered-section">
         <h3 id="Abstract">Abstract</h3>
         <p class="ex1">
             <pre>
@@ -177,7 +226,8 @@
             effect has been studied in engineering throughout the century with studies from the 1940s being recorded (Flaps2Approach, 2012). 
             </pre>
         </p>
-
+        
+        <div class="bordered-section">
         <h3 id="Introduction">Introduction</h3>
             <pre id="Introduction">
             Ground effect is a phenomenon that has saved lives and which was not fully understood until later years (Flaps2Approach, 2012). Aircraft utilize this effect and not many people
@@ -186,6 +236,7 @@
             effect which cannot be seen and is basic in principle.
             </pre>
 
+        <div class="bordered-section">
         <h3 id="Analysis and Discussion">Analysis and Discussion</h3>
             <pre id="Analysis">
             Ground effect occurs when aircraft fly close to the ground, this causes a cushion of air due to a pressure differential (Guo Kexin et al, 2022). The differential is from the change
@@ -283,13 +334,12 @@ chart2.draw(data, options);
 
 <p>(Jeff Scott, 2002)</p>
 
-
-    </body>
+</body>
 
 
 <video src="groundeffect.mp4" width="800" height="450" controls>
 </video>
-
+        <div class="bordered-section">
         <h3 id="References">References</h3>
         <p class="ex1">
             <pre>
